@@ -66,16 +66,4 @@ The original Theobroma color scheme uses pastel apricot peach (`#F9BDB6`) and ri
 
 ---
 
-## 🚀 Running the Project
 
-You can open the project directly in any browser:
-
-```bash
-# Option 1: Open index.html directly
-open /Users/rashichauhan/.gemini/antigravity/scratch/theobroma-frontend/index.html
-
-# Option 2: Run a lightweight local HTTP server
-cd /Users/rashichauhan/.gemini/antigravity/scratch/theobroma-frontend
-python3 -m http.server 8080
-```
-Then visit `http://localhost:8080` in your web browser.
