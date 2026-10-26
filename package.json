@@ -1,0 +1,16 @@
+{
+  "name": "bakery",
+  "version": "1.0.0",
+  "description": "A modern, responsive, and artisanal frontend recreation inspired by Theobroma",
+  "main": "app.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^8.3.5"
+  }
+}
