@@ -24,3 +24,16 @@ This backend implements the exact API calls currently used by `src/services/api.
 - The current React checkout submits `{ city, items: [{ productId, quantity }] }`. The API resolves either MongoDB `_id` values (which `BakeryContext` currently prefers) or stable `id` strings, then calculates prices and totals on the server.
 - The current UI does not collect customer name, email, phone, delivery address, or a real payment authorization. The backend does not invent these fields and records payment as pending.
 - This backend does not modify frontend files. Keep the root `package.json`, root `app.js`, `style.css`, and `src/` as they are.
+
+## Admin authentication and Product CRUD
+
+This version adds an administrator login using bcrypt password hashing and JWTs. There is deliberately no public admin-registration endpoint.
+
+1. Keep the private `server/.env` file (never commit it).
+2. Add `JWT_SECRET` with at least 32 random characters, `JWT_EXPIRES_IN=4h`, `ADMIN_EMAIL`, and `ADMIN_PASSWORD` (at least 12 characters) to that private file.
+3. Run `npm install` in `server/`.
+4. Run `npm run create-admin` once to provision the configured admin account.
+5. Run `npm run dev` in `server/` and the frontend's `npm run dev` from the project root.
+6. Open `http://localhost:5173/admin.html` for the standalone admin interface.
+
+Only authenticated admin users can create, update, or delete products. Never put the JWT signing secret or admin password in frontend code or a `VITE_` variable. The admin page holds the returned short-lived token in `sessionStorage`, clears it on logout, and the server rechecks the account/role on protected requests.
