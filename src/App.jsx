@@ -1,9 +1,20 @@
 import { BakeryProvider } from './context/BakeryContext';
 import BakeryPage from './pages/BakeryPage';
+import AdminApp from './admin/AdminApp';
+import CustomerAuth from './auth/CustomerAuth';
+import './admin/admin.css';
 
-// Keep App.jsx as the application composition root.
-// UI, state management, and API calls live in their own files.
 export default function App() {
+  const path = window.location.pathname.replace(/\/+$/, '') || '/';
+
+  if (path === '/admin' || path === '/admin/login') {
+    return <AdminApp />;
+  }
+
+  if (path === '/login' || path === '/register' || path === '/account') {
+    return <CustomerAuth />;
+  }
+
   return (
     <BakeryProvider>
       <BakeryPage />

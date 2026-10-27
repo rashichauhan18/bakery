@@ -1,18 +1,21 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "Express and MongoDB API for the existing Bakery React frontend",
+  "description": "Express and MongoDB API for the Bakery frontend with secure admin authentication and product CRUD",
   "main": "src/server.js",
   "type": "commonjs",
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "seed": "node src/seed.js"
+    "seed": "node src/seed.js",
+    "create-admin": "node src/createAdmin.js"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.2",
     "cors": "^2.8.6",
     "dotenv": "^18.0.9",
     "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^9.11.4"
   },
   "devDependencies": {
