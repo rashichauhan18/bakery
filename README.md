@@ -64,6 +64,3 @@ The original Theobroma color scheme uses pastel apricot peach (`#F9BDB6`) and ri
    - Tribute to Theobroma's Colaba roots and Parsi culinary traditions
    - Genuine 5-star customer reviews
 
----
-
-

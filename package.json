@@ -1,6 +1,7 @@
 {
   "name": "bakery",
   "version": "1.0.0",
+  "type": "module",
   "description": "A modern, responsive, and artisanal frontend recreation inspired by Theobroma",
   "main": "app.js",
   "scripts": {
@@ -12,5 +13,10 @@
   "license": "ISC",
   "devDependencies": {
     "vite": "^8.3.5"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^6.1.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   }
 }
